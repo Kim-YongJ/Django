@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-        'pybo.apps.PyboConfig',
+    'common.apps.CommonConfig',
+    'pybo.apps.PyboConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -112,6 +113,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+# 로그인 성공후 이동하는 URL
+LOGIN_REDIRECT_URL = '/'
+
+# 로그아웃시 이동하는 URL
+LOGOUT_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
